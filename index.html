@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>HTML5 Avançado</h1>
+					<h3></h3>
+					<p>
+						<small>by <a href="http://hakim.se">DRC</a></small>
+					</p>
+				</section>
+
+				<section>
+					<style>
+						li {
+							float: left;
+							width: 50%;
+							list-style-type: none;
+							text-align: center;
+						}
+						ul {
+							width: 100%;
+							margin:auto;
+						}
+					</style>
+					<h2>Visão Geral</h2> 
+					<h3></h3>
+					<smal>
+						<ul>
+							<li>Apresentação Geral do HTML 5 </li>
+							<li>Formulário HTML 5 </li>
+							<li>API de Áudio</li>
+							<li>API Vídeo </li>
+							<li>Elementos Validadores de Dados</li>
+							<li>API Canvas</li>
+							<li>API Arrastar e Soltar</li>
+							<li>API Geolocalização</li>
+							<li>API Armazenamento Local </li>
+							<li>CSS 3</li>
+							<li>Web Fonts </li>
+							<li>Textos</li>
+							<li>Bordas</li>
+							<li>Fundos </li>
+							<li>Sombras</li>
+							<li>Transformações</li>
+							<li>Transições</li>
+							<li>Media Queries</li>
+							<li>Template Layout</li>
+							<li>User Interface </li>							
+						</ul>					
+					</small>
+				</section>
+				
+				<section>
+					<h1>Allan Esquina</h1>
+					<h3>Formado em Web Design</h3>
+					
+					<h3>Certificações:</h3>
+					<p>Web Applications Development with Microsoft .NET Framework 4 </p>
+					<p>Programming in HTML5 with JavaScript and CSS3</p>
+
+				</section>
+				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+					<h2></h1>
+					<h2>Front-end Developer at UOL</h2>
+					
+					<h3>Projetos particulares:</h3>
+					<p>Corner Grid </p>
+					<p>Ubuntu Pixel Perfect</p>
+					<p>FreakNav</p>
+
+				</section>
+				<section>
+					<h2>Ahhhhhh</h2>
+					<img src="src/meme-ahh.jpg" alt="">
+				</section>
+
+				<section>
+					<h1>Ready?</h1>					
+				</section>
+					
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h1>Evolução do HTML</h1>		
+						<h3>(Hypertext Markup Language)</h3>				
+					</section>
+					<section>
+						<h2>Quem Criou?</h2>						
+					</section>
+					<section>
+						<figure>
+							<img src="src/timbernersleejeuneavecordinateur.jpg" alt="">							
+							<figcaption>
+								Tim Berners Lee (criador da World Wide Web) em 1990
+							</figcaption>
+						</figure>
+
+					</section>
+					<section>
+						<h2>Por Quê?</h2>
+					</section>
+					<section>
+						<h1>PORQUE ELE QUIS</h1>
+					</section>
+					<section>
+						<h2>Mas qual foi o motivo?</h2>
+					</section>
+					<section>
+						<h2>Suprir a necessidade de comunicação</h2>
+					</section>
+					
+					<section>
+						<h2>Resolveu? Era bacana?</h2>
+					</section>
+					<section>
+						<h1>Era, só que não.</h1>
+					</section>
+					<section>
+						<h2>O que aconteceu?</h2>
+					</section>
+					<section>
+						<h2>A internet se expandiu</h2>
+					</section>
+					<section>
+						<h2>Quais as dificuldades?</h2>
+					</section>
+					<section>
+						<h2>Falta de padrões para desenvolvimento</h2>						
+					</section>
+					<section>
+						<h2>Pouca compatibilidade com dispositivos</h2>
+					</section>
+					<section>
+						<h2>Como tentaram resolver?</h2>
+					</section>
+					<section>
+						<h1>W3C</h1>
+						<h2>(World Wide Web Consortium)</h2>
+						<p>Fundada em 1994 pelo criador da World Wide Web Tim Berners-Lee com o intuito de padronizar a linguagem.</p>
+					</section>
+					<section>
+						<h2>Em 1996 surgiram o CSS e JavaScript</h2>
+					</section>
+					<section>
+						<h2>Em 1997 veio o HTML4</h2>
+					</section>
+					<section>
+						<h2>Em 1998 o CSS 2</h2>						
+					</section>
+					<section>
+						<h2>Em 2000 o XHTML 1</h2>
+						<h2>(EXtensible Hypertext Markup Language)</h2>						
+					</section>
+					<section>
+						<h2>Em 2002 o conceito de Tableless Web Design</h2>
+					</section>
+					<section>
+						<h2>Em 2005 o AJAX</h2>
+					</section>
+					<section>
+						<h2>E em 2009...</h2>
+					</section>
+					<section>
+						<h2>Sabem?</h2>
+					</section>
+					<section>
+						<h1>QUEM??????</h1>
+					</section>
+					<section>
+						<img src="src/FIFA09set.jpg" alt="">
+					</section>
+					<section>
+						<h1>SÓ QUE NÃO</h1>
+					</section>
+					<section>
+						<img src="src/html5_logo.png" alt="">
+					</section>					
+					<section>
+						<h1>Estrutura de um HTML</h1>
+					</section>
+					<section>
+						<h2>HTML<h2>
+						<pre>
+							<html>
+								<head>
+									<title>Título do Documento</title>
+								</head>
+								<body>
+									Elementos de visualização
+								</body>
+							</html>
+						</pre>
+					</section>
+				
+					<section>
+						<h2>HTML 4<h2>
+						<pre>
+							<html>
+								<head>
+									<title>Título do Documento</title>
+								</head>
+								<body>
+									Elementos de visualização
+								</body>
+							</html>
+						</pre>
+					</section>
+					<section>
+						<h2>Time Line do HTML</h2>						
+						<img src="src/timeline.jpg" alt="">			
+					</section>
+					
+				</section>
+
+				<section>
+					<section>
+						<h1>Web Standards</h1>					
+					</section>
+
+					<section>
+						<h2>O que é?</h2>					
+					</section>
+
+					<section>
+						<h2>Um conjunto de recomendações.</h2>					
+					</section>
+					<section>
+						<h2>O que seria uma recomendação W3C?</h2>					
+					</section>
+					<section>
+						<p>Uma Recomendação do W3C é uma especificação ou um conjunto de diretrizes que depois de ter passado por exaustiva discussão e ter-se estabelecido um consenso, recebeu o endosso dos Membros e do Diretor do W3C. O W3C indica vivamente o amplo emprego de suas Recomendações.</p>
+						<small>Blog Maujor.com</small>
+					</section>
+					<section>
+						<h1>WaSP</h1>
+						<h2>(Web Standards Projec)</h2>
+					</section>
+					<section>
+						<h2>O que é?</h2>
+					</section>
+					<section>
+						<h2>Um grupo criado com o intuíto de divulgar os padrões web</h2>						
+					</section>
+					<section>
+						<h2>Segundo o Tableless.com</h2>
+						<h1>A Cavalaria</h1>
+					</section>
+					<section>
+						<h2>Quais seus grandes feitos?</h2>
+					</section>
+					<section>
+						<h2>Convencer a Netscape a doar para a comunidade o engine do Netscape</h2>
+					</section>
+					<section>
+						<h2>Fazer com que os fabricantes de browsers seguissem as idéias e recomendações do W3C</h2>
+					</section>
+					<section>
+						<h2>Fazer com que os desenvolvedores também adotassem os Padrões do W3C</h2>
+					</section>
+					<section>
+						<h2>Hoje, desenvolvedores e Browsers lutam a favor dos Padrões web (Web Stadards)</h2>
+					</section>
+					<section>
+						<img src="src/Not-Bad-Obama-Meme-1024x1024.png" alt="">
+					</section>
+				</section>
+				
+				<section>					
+					<section>
+						<h1>DOM</h1>					
+					</section>
+					<section>
+						<img src="src/doom.png" alt="">
+					</section>
+					<section>
+						<h2>Document Object Model</h2>
+					</section>
+
+					<section>
+						<img src="src/html-dom-example.gif" alt="">
+					</section>
+
+
+					<section>
+						<h1>node.h</h1>
+					</section>
+					<section>
+						<h2>Document</h2>
+						<h2>Element</h2>
+						<h2>Text</h2>
+					</section>
+
+					<section>
+						<h1>Render Tree</h1>
+					</section>
+					<section>
+						<img src="src/render.png" alt="">
+					</section>
+					<section>
+						<h1>Attach()</h1>
+						<h2>Metodo disparado pelo browser</h2>
+					</section>
+					<section>
+						<h1>RenderStyle()</h1>
+						<h2>Guarda objetos de referência com as propriedades CSS do documento. É salva na Render Tree.</h2>
+					</section>
+					<section>
+						<h1>style()</h1>
+						<h2>Acessa o CSS BOX Model e posiciona o elemento na tela.</h2>
+					</section>
+					<section>
+						<img src="src/boxdim.png" alt="">
+					</section>
+					<section>
+						<h2>O que o browser faz com elementos desconhecidos?</h2>
+					</section>
+					<section>
+						<img src="src/renderizacaoIE-5.png" alt="">
+					</section>
+					<section>
+						<h2>modernizr</h2>
+						<h2>html5shim</h2>
+					</section>
+					<section>
+						<h1>Manipulando o DOM</h1>
+					</section>
+					<section>
+						<p>document.getElementById()</p>
+						<p>document.getElementsByName()</p>
+						<p>document.getElementsByTagName()</p>
+						<p>document.querySelector(selectors)</p>
+					</section>
+				</section>
+				<section>
+					<h1>Semântica</h1>
+				</section>
+				<section>
+					<h2>Point of View</h2>
+					<p>
+						Press <strong>ESC</strong> to enter the slide overview.
+					</p>
+					<p>
+						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
+					</p>
+				</section>
+
+				<section>
+					<h2>Works in Mobile Safari</h2>
+					<p>
+						Try it out! You can swipe through the slides and pinch your way to the overview.
+					</p>
+				</section>
+
+				<section>
+					<h2>Marvelous Unordered List</h2>
+					<ul>
+						<li>No order here</li>
+						<li>Or here</li>
+						<li>Or here</li>
+						<li>Or here</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Fantastic Ordered List</h2>
+					<ol>
+						<li>One is smaller than...</li>
+						<li>Two is smaller than...</li>
+						<li>Three!</li>
+					</ol>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						## Markdown support
+
+						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
+
+						```
+						<section data-markdown>
+						  ## Markdown support
+
+						  For those of you who like that sort of thing.
+						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
+						</section>
+						```
+					</script>
+				</section>
+
+				<section id="transitions">
+					<h2>Transition Styles</h2>
+					<p>
+						You can select from different transitions, like: <br>
+						<a href="?transition=cube#/transitions">Cube</a> -
+						<a href="?transition=page#/transitions">Page</a> -
+						<a href="?transition=concave#/transitions">Concave</a> -
+						<a href="?transition=zoom#/transitions">Zoom</a> -
+						<a href="?transition=linear#/transitions">Linear</a> -
+						<a href="?transition=fade#/transitions">Fade</a> -
+						<a href="?transition=none#/transitions">None</a> -
+						<a href="?#/transitions">Default</a>
+					</p>
+				</section>
+
+				<section id="themes">
+					<h2>Themes</h2>
+					<p>
+						Reveal.js comes with a few themes built in: <br>
+						<a href="?theme=sky#/themes">Sky</a> -
+						<a href="?theme=beige#/themes">Beige</a> -
+						<a href="?theme=simple#/themes">Simple</a> -
+						<a href="?theme=serif#/themes">Serif</a> -
+						<a href="?theme=night#/themes">Night</a> -
+						<a href="?#/themes">Default</a>
+					</p>
+					<p>
+						<small>
+							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
+						</small>
+					</p>
+				</section>
+
+				<section>
+					<section data-state="alert">
+						<h2>Global State</h2>
+						<p>
+							Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+							will be added as a class to the document element when the slide is open. This lets you
+							apply broader style changes, like switching the background.
+						</p>
+						<a href="#" class="image navigate-down">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section data-state="blackout">
+						<h2>"blackout"</h2>
+						<a href="#" class="image navigate-down">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section data-state="soothe">
+						<h2>"soothe"</h2>
+						<a href="#" class="image navigate-next">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(-90deg);">
+						</a>
+					</section>
+				</section>
+
+				<section data-state="customevent">
+					<h2>Custom Events</h2>
+					<p>
+						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+					</p>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+Reveal.addEventListener( 'customevent', function() {
+	console.log( '"customevent" has fired' );
+} );
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Clever Quotes</h2>
+					<p>
+						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
+					</p>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+					</blockquote>
+				</section>
+
+				<section>
+					<h2>Pretty Code</h2>
+					<pre><code data-trim contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) ) {
+        node.className += ' roll';
+      }
+    };
+  }
+}
+					</code></pre>
+					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section>
+
+				<section>
+					<h2>Intergalactic Interconnections</h2>
+					<p>
+						You can link between slides internally,
+						<a href="#/2/3">like this</a>.
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Fragmented Views</h2>
+						<p>Hit the next arrow...</p>
+						<p class="fragment">... to step through ...</p>
+						<ol>
+							<li class="fragment"><code>any type</code></li>
+							<li class="fragment"><em>of view</em></li>
+							<li class="fragment"><strong>fragments</strong></li>
+						</ol>
+
+						<aside class="notes">
+							This slide has fragments which are also stepped through in the notes window.
+						</aside>
+					</section>
+					<section>
+						<h2>Fragment Styles</h2>
+						<p>There's a few styles of fragments, like:</p>
+						<p class="fragment grow">grow</p>
+						<p class="fragment shrink">shrink</p>
+						<p class="fragment roll-in">roll-in</p>
+						<p class="fragment fade-out">fade-out</p>
+						<p class="fragment highlight-red">highlight-red</p>
+						<p class="fragment highlight-green">highlight-green</p>
+						<p class="fragment highlight-blue">highlight-blue</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Spectacular image!</h2>
+					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
+						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
+					</a>
+				</section>
+
+				<section>
+					<h2>Export to PDF</h2>
+					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
+					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+					<script>
+						document.getElementById('slideshare').attributeName = 'allowfullscreen';
+					</script>
+				</section>
+
+				<section>
+					<h2>Take a Moment</h2>
+					<p>
+						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
+						during a presentation.
+					</p>
+				</section>
+
+				<section>
+					<h2>Stellar Links</h2>
+					<ul>
+						<li><a href="http://slid.es">Try the online editor</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
+						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>THE END</h1>
+					<h3>BY Hakim El Hattab / hakim.se</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
