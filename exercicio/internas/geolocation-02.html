@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="UTF-8">
+  <title>Google Maps - Rotas</title>
+  <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <style type="text/css">
+    body {
+      height: 100%;
+    }
+    #map_canvas {
+      width: 100%;
+      height: 100%;
+    }
+    .gm-style-iw {
+      width: 200px;
+      height: 50px;
+    }
+    .gm-style-iw div{
+      font-size: 1.8em !important;
+      font-weight: bold; 
+    }
+  </style>
+</head>
+<body>
+
+  <div id="map_canvas"></div>    
+
+<script type="text/javascript">               
+
+(function(win,doc) {
+  //Criamos o namespace
+  var Localizacao = {};
+
+  //Pegamos a posição do usuário
+  Localizacao.getPosition = function(){
+    // Verifica se o browser do usuario tem suporte a Geolocation
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition( function( position ){          
+        Localizacao.initializeMap(position);       
+      });
+    }
+  }   
+
+  //Inicia a API do google maps
+  Localizacao.initializeMap = function(position) {
+    var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+        myOptions = {
+          zoom: 13,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          center: pos
+        },
+        map = new google.maps.Map(document.getElementById("map_canvas"), myOptions),
+        infowindow = new google.maps.InfoWindow({
+          map: map,
+          position: pos,
+          content: 'Você está aqui!!'
+        });      
+  }
+  Localizacao.init = function(){
+    this.getPosition();
+  }
+  //Cria Localizacao no escopo global
+  win.Localizacao = Localizacao;
+
+})(window, document);
+
+window.onload = function() {
+  Localizacao.init();
+}
+
+</script>
+   
+</body>
+</html>
+
