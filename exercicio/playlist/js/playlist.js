@@ -6,8 +6,9 @@
 
 	//Object Playlist
 	lib.Playlist = {
+		currentMedia : 1,
 		player : {},
-		songs : {},
+		songs : [],
 		targetList : {},
 		play : function(src) {
 			this.player.pause();
@@ -20,10 +21,10 @@
 			this.addEvents();
 		},		
 		handleDragEnter : function() {
-			console.log("handleDragEnter");
+			//console.log("handleDragEnter");
 		},
 		handleDragLeave : function() {
-			console.log("handleDragLeave");
+			//console.log("handleDragLeave");
 		},
 		handleDragOver : function(e) {
 			if (e.preventDefault) e.preventDefault();
@@ -44,19 +45,20 @@
 			
 			return false;
 		},
+		playNext : function() {
+			lib.Playlist.currentMedia = (lib.Playlist.songs.length == lib.Playlist.currentMedia) ? 1 : lib.Playlist.currentMedia += 1;
+			this.play(lib.Playlist.songs[(lib.Playlist.currentMedia-1)].src);
+		},
 		addEvents : function() {
+			//Playlist
 			this.targetList.addEventListener('dragenter', this.handleDragEnter, false)	
 			this.targetList.addEventListener('dragleave', this.handleDragLeave, false);				
 			this.targetList.addEventListener('drop', this.handleDrop, false)
 			this.targetList.addEventListener('dragover', this.handleDragOver, false);		
+			//Player
+			this.player.addEventListener("ended",this.playNext,false);
 		},
-		init : function() {
-			this.songs = [
-				{
-					name : "Musica01",
-					src	 : "http://v2v.cc/~j/theora_testsuite/320x240.ogg"
-				}		
-			];
+		init : function() {			
 			this.player = document.getElementById("player");
 			this.targetList = document.getElementById("playlist");
 			this.refreshList();		
@@ -71,8 +73,7 @@
 			lib.Utils.createList(this.targetList, this.songs);		
 			this.addEvents();	
 		},	
-		handleDragStart : function(e) {
-			console.dir(this);
+		handleDragStart : function(e) {			
 			e.dataTransfer.setData('name', this.innerHTML);
 			e.dataTransfer.setData('src', this.name);
 		},
@@ -86,25 +87,7 @@
 				tempEl.addEventListener('dragstart', this.handleDragStart, false);				
 			}
 		},
-		init : function() {
-			this.songs = [
-				{
-					name : "Musica01",
-					src	 : "http://v2v.cc/~j/theora_testsuite/320x240.ogg"
-				},
-				{
-					name : "Musica02",
-					src	 : "http://v2v.cc/~j/theora_testsuite/320x240.ogg"
-				},
-				{
-					name : "Musica03",
-					src	 : "http://v2v.cc/~j/theora_testsuite/320x240.ogg"
-				},
-				{
-					name : "Musica04",
-					src	 : "http://v2v.cc/~j/theora_testsuite/320x240.ogg"
-				}
-			];
+		init : function() {			
 			this.targetList = document.getElementById("songlist");
 			this.refreshList();
 		}
@@ -129,6 +112,26 @@
 })(window, document);
 
 window.onload = function() {
+	//Same Examples of songs
+	LibAudio.SongList.songs = [
+		{
+			name : "Musica01",
+			src	 : "http://v2v.cc/~j/theora_testsuite/320x240.ogg"
+		},
+		{
+			name : "Musica02",
+			src	 : "http://v2v.cc/~j/theora_testsuite/320x240.ogg"
+		},
+		{
+			name : "Musica03",
+			src	 : "http://v2v.cc/~j/theora_testsuite/320x240.ogg"
+		},
+		{
+			name : "Musica04",
+			src	 : "http://v2v.cc/~j/theora_testsuite/320x240.ogg"
+		}
+	];
+	//Initialize Libs
 	LibAudio.Playlist.init();
-	LibAudio.SongList.init();	
+	LibAudio.SongList.init();		
 }

@@ -1,0 +1,34 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: Helvetica;
+	font-size: 18px;
+}
+header {
+	text-align: center;
+	background-color: #334;
+	color: #fff;
+	padding: 5px;
+}
+
+.list {
+	background: #445;
+	padding: 10px;
+	border: 1px dashed #443;
+}
+#playlist, #songlist {
+	min-height: 30px;
+}
+#playlist a, #songlist a {
+	padding: 5px 5px 5px;
+	background-color: #445;
+	display: block;
+	color: #ccc;
+	text-decoration: none;
+	border-bottom: 1px solid #333;
+}
+#playlist a:hover, #songlist a:hover {
+	background-color: #447;
+}}
