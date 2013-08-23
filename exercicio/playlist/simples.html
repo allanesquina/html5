@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Drag and Drop</title>
+</head>
+<script>
+	function drope(e) {		
+		e.stopPropagation(); 
+	    e.preventDefault();
+
+		console.log('drop');
+		return false;
+	}
+	function over(e) {
+		e.stopPropagation(); 
+	    e.preventDefault();		
+		return false;
+	}
+	window.onload = function() {
+		document.getElementById("teste").addEventListener("drop", drope, false);
+		document.getElementById("teste").addEventListener("dragover", over, false);
+	}
+</script>
+<body>	
+	<div id="teste" style="height:300px; border:1px solid"
+	ondragleave="console.log('leave')" 
+
+	ondragenter="console.log('enter')"	
+	ondragover="over">
+
+	</div>
+	
+	<div style="height:50px; border:1px solid; cursor:move;"
+	 ondragstart="console.log('start')" draggable="true">teste</div>
+	
+</body>
+</html>

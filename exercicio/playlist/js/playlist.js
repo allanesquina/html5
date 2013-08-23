@@ -1,4 +1,3 @@
-
 ;(function(win, doc){
 		
 	//Namespace
@@ -27,12 +26,18 @@
 			//console.log("handleDragLeave");
 		},
 		handleDragOver : function(e) {
-			if (e.preventDefault) e.preventDefault();
+			if (e.preventDefault)  {
+				e.preventDefault();				
+			}
+
 		    e.dataTransfer.dropEffect = 'copy';    
 		    return false;
 		},
 		handleDrop : function(e) {
-			if (e.stopPropagation) e.stopPropagation();
+			if (e.stopPropagation) {
+				e.stopPropagation();					
+			} 
+
 			var name = e.dataTransfer.getData("name"),
 				src = e.dataTransfer.getData("src"),				
 				newSong = {
@@ -112,7 +117,7 @@
 })(window, document);
 
 window.onload = function() {
-	//Same Examples of songs
+	//Some Examples of songs
 	LibAudio.SongList.songs = [
 		{
 			name : "Musica01",
