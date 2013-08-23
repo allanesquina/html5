@@ -74,7 +74,7 @@
 		handleDragStart : function(e) {
 			console.dir(this);
 			e.dataTransfer.setData('name', this.innerHTML);
-			e.dataTransfer.setData('src', this.innerHTML);
+			e.dataTransfer.setData('src', this.name);
 		},
 		addEvents : function() {
 			var els = document.querySelectorAll("#songlist [draggable=true]"),
@@ -117,7 +117,7 @@
 				markup = "";
 
 			while(length--) {
-				markup += "<li><a draggable='true' onclick=LibAudio.Playlist.play('" + songs[length].src + "') href='javascript:void(0);'>" + songs[length].name + "</a></li>";
+				markup += "<li><a name='" + songs[length].src + "' draggable='true' onclick=LibAudio.Playlist.play('" + songs[length].src + "') href='javascript:void(0);'>" + songs[length].name + "</a></li>";
 			}
 			
 			target.innerHTML = markup;
