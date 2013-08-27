@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS:nth-child</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		html { font: 13px/1.4 helvetica, arial; }
+		ul {
+			background: #ccc;
+			font-size: 0;
+			width: 50%;
+			margin: 0 auto;
+		}
+		li {
+			background: #fff;
+			display: inline-block;
+			font-size: 1rem;
+			width: 28%;
+			margin: 2.5%;
+		}
+		li h3 {
+			text-align: center;
+			background: #333;
+			color: #fff;
+		}
+		li figure img {
+			display: block;
+			margin: 0 auto;
+			width: 50%;
+		}
+		li p { padding: 10px; }
+
+		/* nth-child */
+		/* impares */
+		.odd li:nth-child(odd),
+		.nth-2n-1 li:nth-child(2n + 1),
+
+		/* pares */
+		.even li:nth-child(even),
+		.nth-2n li:nth-child(2n),
+
+		/* todos */
+		.nth-n li:nth-child(n),
+
+		/* terceira coluna */
+		.nth-3n li:nth-child(3n),
+
+		/* todos a partir do 4º */
+		.nth-n-4 li:nth-child(n + 4),
+
+		/* primeira coluna */
+		.nth-3n-1 li:nth-child(3n + 1),
+
+		/* segunda coluna */
+		.nth-3n-2 li:nth-child(3n + 2),
+
+		/* xadrez a partir do 5º */
+		.nth-2n-5 li:nth-child(2n + 5),
+
+		/* todos até o 3º */
+		.nth--n-3 li:nth-child(-n + 3),
+
+		/* xadrez até o 8º */
+		.nth--2n-8 li:nth-child(-2n + 8) { background: #06c; }
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			<h3>1</h3>
+			<figure><img src="http://cdn.ahrengot.com/wp-content/uploads/github-logo-transparent.png" alt="github"></figure>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</li>
+		<li>
+			<h3>2</h3>
+			<figure><img src="http://cdn.ahrengot.com/wp-content/uploads/github-logo-transparent.png" alt="github"></figure>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</li>
+		<li>
+			<h3>3</h3>
+			<figure><img src="http://cdn.ahrengot.com/wp-content/uploads/github-logo-transparent.png" alt="github"></figure>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</li>
+		<li>
+			<h3>4</h3>
+			<figure><img src="http://cdn.ahrengot.com/wp-content/uploads/github-logo-transparent.png" alt="github"></figure>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</li>
+		<li>
+			<h3>5</h3>
+			<figure><img src="http://cdn.ahrengot.com/wp-content/uploads/github-logo-transparent.png" alt="github"></figure>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</li>
+		<li>
+			<h3>6</h3>
+			<figure><img src="http://cdn.ahrengot.com/wp-content/uploads/github-logo-transparent.png" alt="github"></figure>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</li>
+		<li>
+			<h3>7</h3>
+			<figure><img src="http://cdn.ahrengot.com/wp-content/uploads/github-logo-transparent.png" alt="github"></figure>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</li>
+		<li>
+			<h3>8</h3>
+			<figure><img src="http://cdn.ahrengot.com/wp-content/uploads/github-logo-transparent.png" alt="github"></figure>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</li>
+		<li>
+			<h3>9</h3>
+			<figure><img src="http://cdn.ahrengot.com/wp-content/uploads/github-logo-transparent.png" alt="github"></figure>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</li>
+		<li>
+			<h3>10</h3>
+			<figure><img src="http://cdn.ahrengot.com/wp-content/uploads/github-logo-transparent.png" alt="github"></figure>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</li>
+		<li>
+			<h3>11</h3>
+			<figure><img src="http://cdn.ahrengot.com/wp-content/uploads/github-logo-transparent.png" alt="github"></figure>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</li>
+		<li>
+			<h3>12</h3>
+			<figure><img src="http://cdn.ahrengot.com/wp-content/uploads/github-logo-transparent.png" alt="github"></figure>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</li>
+	</ul>
+</body>
+</html>
