@@ -47,11 +47,11 @@
 		/* todos */
 		.nth-n li:nth-child(n),
 
-		/* terceira coluna */
-		.nth-3n li:nth-child(3n),
-
 		/* todos a partir do 4º */
 		.nth-n-4 li:nth-child(n + 4),
+
+		/* todos até o 3º */
+		.nth--n-3 li:nth-child(-n + 3),
 
 		/* primeira coluna */
 		.nth-3n-1 li:nth-child(3n + 1),
@@ -59,14 +59,23 @@
 		/* segunda coluna */
 		.nth-3n-2 li:nth-child(3n + 2),
 
+		/* terceira coluna */
+		.nth-3n li:nth-child(3n),
+
 		/* xadrez a partir do 5º */
 		.nth-2n-5 li:nth-child(2n + 5),
 
-		/* todos até o 3º */
-		.nth--n-3 li:nth-child(-n + 3),
-
 		/* xadrez até o 8º */
-		.nth--2n-8 li:nth-child(-2n + 8) { background: #06c; }
+		.nth--2n-8 li:nth-child(-2n + 8)
+
+		/* primeiro item */
+		.last li:first-child,
+
+		/* ultimo item */
+		.last li:last-child,
+
+		/* penultimo item */
+		li:nth-last-child(2) { background: #06c; }
 	</style>
 </head>
 <body>
